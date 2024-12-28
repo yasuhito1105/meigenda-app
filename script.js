@@ -3,7 +3,7 @@ const typeDisplay =document.getElementById("typeDisplay");
 const typeInput = document.getElementById("type-Input");
 const timer = document.getElementById("timer");
 
-//下のコードでヘッダーの処理をなくす//
+// 下のコードでヘッダーの処理をなくす この処理はnode.jsを入れないと使えないらしい//
 // fetch('https://meigen.doodlenote.net/api/json.php?c=1', {
 //     mode: 'no-cors'
 //   })
@@ -52,7 +52,7 @@ const timer = document.getElementById("timer");
 //非同期の処理//
 function GetRandomSentence(){
   return fetch(RANDOM_SENTENCE_URL_API)
-    // .then((response) => response.json())
+    .then((response) => response.json())
     .then((data) => console.log(data[0].meigen));
 }
 GetRandomSentence();
@@ -84,4 +84,4 @@ function getTimerTime(){
 function TimeUp(){
   RenderNextSentence();
 }
-// renderNextSentence();
+renderNextSentence();
