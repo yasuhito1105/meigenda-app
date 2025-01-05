@@ -9,11 +9,11 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(to left top, #ded,#bbb);
+  background: linear-gradient(to left top, rgb(176, 242, 176),#f2aaaa);
   font-family: "Poppins", sans-serif;
 }
 .container{
-  background-color: blanchedalmond;
+  background-color: rgb(138, 212, 241);
   font-size: 2.4rem;
   font-weight: 300;
   padding:  4rem;
@@ -32,7 +32,7 @@ body {
   top: 2rem;
   font-size: 5rem;
   font-weight: bold;
-  color: green;
+  color: blue;
 }
 .type-display {
   margin-bottom: 6rem;
