@@ -32,7 +32,7 @@ body {
   top: 2rem;
   font-size: 5rem;
   font-weight: bold;
-  color: rgb(213, 44, 207);
+  color: rgb(13, 3, 110);
 }
 .type-display {
   margin-bottom: 6rem;
@@ -40,7 +40,7 @@ body {
 }
 .type-Input {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   outline: none;
   width: 100%;
   height: 15rem;
