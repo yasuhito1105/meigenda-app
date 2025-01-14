@@ -1,7 +1,7 @@
-const RANDOM_SENTENCE_URL_API ="https://meigen.doodlenote.net/api/json.php?c=1";
-const typeDisplay =document.getElementById("typeDisplay");
-const typeInput = document.getElementById("type-Input");
-const timer = document.getElementById("timer");
+// const RANDOM_SENTENCE_URL_API ="https://meigen.doodlenote.net/api/json.php?c=1";
+// const typeDisplay =document.getElementById("typeDisplay");
+// const typeInput = document.getElementById("type-Input");
+// const timer = document.getElementById("timer");
 
 // 下のコードでヘッダーの処理をなくす この処理はnode.jsを入れないと使えないらしい//
 // fetch('https://meigen.doodlenote.net/api/json.php?c=1', {
@@ -50,38 +50,46 @@ const timer = document.getElementById("timer");
 // }
 
 //非同期の処理//
-function GetRandomSentence(){
-  return fetch(RANDOM_SENTENCE_URL_API)
-    .then((response) => response.json())
-    .then((data) => console.log(data[0].meigen));
-}
-GetRandomSentence();
+// function GetRandomSentence(){
+//   return fetch(RANDOM_SENTENCE_URL_API)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data[0].meigen));
+// }
+// GetRandomSentence();
 
-async function RenderNextSentence(){
-  const sentence = await GetRandomSentence();
-  // console.log(sentence)
-  typeDisplay.innerText = sentence;
+// async function RenderNextSentence(){
+//   const sentence = await GetRandomSentence();
+//   // console.log(sentence)
+//   typeDisplay.innerText = sentence;
 
 
-  typeInput.innerText = "";
+//   typeInput.innerText = "";
 
-}
+// }
 
-let startTime;
-let originTime = 30;
-function StartTimer() {
-  timer.innerText = originTime;
-  startTime = new Date();
-  setInterval(() => {
-    timer.innerText = originTime - getTimerTime();
-    if (timer.innerText <= 0)TimeUp();
-  },1000);
-}
+// let startTime;
+// let originTime = 30;
+// function StartTimer() {
+//   timer.innerText = originTime;
+//   startTime = new Date();
+//   setInterval(() => {
+//     timer.innerText = originTime - getTimerTime();
+//     if (timer.innerText <= 0)TimeUp();
+//   },1000);
+// }
 
-function getTimerTime(){
-  return Math.floor((new Date() - startTime) / 1000);
-}
-function TimeUp(){
-  RenderNextSentence();
-}
-renderNextSentence();
+// function getTimerTime(){
+//   return Math.floor((new Date() - startTime) / 1000);
+// }
+// function TimeUp(){
+//   RenderNextSentence();
+// }
+// renderNextSentence();
+
+// ここからAPIを使わないコードを書く
+const typeDisplay = [
+  'JavaScript'
+];
+
+const typeInput = document.getElementById('typeInput');
+
