@@ -87,9 +87,10 @@
 // renderNextSentence();
 
 // ここからAPIを使わないコードを書く
-const typeDisplay = [
-  'JavaScript'
+const container = [
+  'JavaScript',
+  'document'
 ];
 
-const typeInput = document.getElementById('typeInput');
-
+const typeDisplay = document.getElementById('typeDisplay');
+const typeInput = document.getElementById('type-Input');
