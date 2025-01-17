@@ -94,3 +94,11 @@ const container = [
 
 const typeDisplay = document.getElementById('typeDisplay');
 const typeInput = document.getElementById('type-Input');
+const textarea = document.getElementById('textarea');
+
+let typeInputTextWord = typeInput.textContent.split('');
+let typeDisplayTextWord = [];
+
+document.addEventListener('type-Input',(e) => {
+  console.log(e)
+});
