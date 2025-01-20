@@ -100,5 +100,10 @@ let typeInputTextWord = typeInput.textContent.split('');
 let typeDisplayTextWord = [];
 
 document.addEventListener('type-Input',(e) => {
-  console.log(e)
+  if (typeInputTextWords[0] === e.date){
+
+    typeDisplayTextWord.push( typeDisplayTextWords[0] );
+    typeDisplayTextWords.shift();
+    
+  }
 });
