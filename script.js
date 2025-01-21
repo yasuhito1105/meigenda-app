@@ -102,8 +102,15 @@ let typeDisplayTextWord = [];
 document.addEventListener('type-Input',(e) => {
   if (typeInputTextWords[0] === e.date){
 
-    typeDisplayTextWord.push( typeDisplayTextWords[0] );
-    typeDisplayTextWords.shift();
-    
+    typeDisplayTextWord.push( typeInputTextWords[0] );
+    typeInputTextWords.shift();
+
+    console.log('入力済み:' + typeDisplayTextWords);
+    console.log('未入力:' + typeInputTextWords)
+
+    typeDisplay.textContent = typeDisplayTextWords.join('');
+    typeInput.textContent = typeInputTextWords.join('');
+  }else{
+    console.log('不正解');
   }
 });
