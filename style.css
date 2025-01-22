@@ -27,6 +27,9 @@ body {
   margin-top: 4rem;
   font-size: 3rem;
 }
+.marker{
+  background-color: blue;
+}
 .timer {
   position: absolute;
   top: 2rem;

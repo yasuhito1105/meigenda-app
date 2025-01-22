@@ -87,7 +87,7 @@
 // renderNextSentence();
 
 // ここからAPIを使わないコードを書く
-const container = [
+const question = [
   'JavaScript',
   'document'
 ];
@@ -98,6 +98,24 @@ const textarea = document.getElementById('textarea');
 
 let typeInputTextWord = typeInput.textContent.split('');
 let typeDisplayTextWord = [];
+let currentKer;
+let currentText;
+
+
+// 新しい問題文をセットする記述
+const setQuestion = () =>{
+
+  currentKer = Math.floor( Math.random() * questions.length );
+  currentText = questions[ currentKer ];
+
+  typeDisplay.textContent = '';
+  typeInput.textContent = currentText;
+  typeInputTextWord.value = '';
+
+
+  typeDisplayTextWords = [];
+  typeInputTextWords = currentText.split('');
+};
 
 document.addEventListener('type-Input',(e) => {
   if (typeInputTextWords[0] === e.date){
@@ -110,6 +128,13 @@ document.addEventListener('type-Input',(e) => {
 
     typeDisplay.textContent = typeDisplayTextWords.join('');
     typeInput.textContent = typeInputTextWords.join('');
+
+    // 全ての文字が正しく入力されたら新しい問題文をセットする関数
+    if(typeInputTextWords.length <= 0){
+      console.log('クリア');
+      setQuestion();
+    }
+
   }else{
     console.log('不正解');
   }
