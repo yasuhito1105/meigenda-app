@@ -27,6 +27,20 @@ body {
   margin-top: 4rem;
   font-size: 3rem;
 }
+.message{
+  display: block;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.button{
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}
 .marker{
   background-color: blue;
 }

@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="timer" id="timer">0</div>
-    <div class="container">
+    <div id="game" class="container">
       <span id="typeDisplay" class="marker"></span>
       <span id="type-Input">ここに表示される</span>
       <div class="type-display" id="typeDisplay">
@@ -16,6 +16,12 @@
       <textarea class="type-Input" id="type-Input"autofocus></textarea>
     </div>
 
+    <div id="message" class="coontainar hidden">
+      <div class="message">
+        ゲームクリア！お疲れ様でした!<br>
+        <button id="replayBtn" class="button">もう一度プレイする</button>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -108,14 +108,21 @@ const setQuestion = () =>{
   currentKer = Math.floor( Math.random() * questions.length );
   currentText = questions[ currentKer ];
 
+  // 問題が重複しない処理
+  questions.splice(currentKer,1);
+  console.log(questions);
+
   typeDisplay.textContent = '';
   typeInput.textContent = currentText;
+
+  // これまでに入力されたフォームのリセット
   typeInputTextWord.value = '';
 
 
   typeDisplayTextWords = [];
   typeInputTextWords = currentText.split('');
 };
+setQuestion();
 
 document.addEventListener('type-Input',(e) => {
   if (typeInputTextWords[0] === e.date){
