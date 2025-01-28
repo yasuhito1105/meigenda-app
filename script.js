@@ -95,6 +95,10 @@ const question = [
 const typeDisplay = document.getElementById('typeDisplay');
 const typeInput = document.getElementById('type-Input');
 const textarea = document.getElementById('textarea');
+const game = document.getElementById('game');
+const message = document.getElementById('message');
+const replayBtn = document.getElementById('replayBtn');
+
 
 let typeInputTextWord = typeInput.textContent.split('');
 let typeDisplayTextWord = [];
@@ -138,11 +142,15 @@ document.addEventListener('type-Input',(e) => {
 
     // 全ての文字が正しく入力されたら新しい問題文をセットする関数
     if(typeInputTextWords.length <= 0){
-      console.log('クリア');
-      setQuestion();
-    }
+        if(questions.length <= 0){
+          game.classList.add('hidden');
+          message.classList.remove('hidden');
+        }else{
+          setQuestion();
+        }
+        // console.log('クリア');
+        // setQuestion();
+      }
 
-  }else{
-    console.log('不正解');
   }
 });
