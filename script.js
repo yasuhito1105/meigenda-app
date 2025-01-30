@@ -143,10 +143,10 @@ document.addEventListener('type-Input',(e) => {
     // 全ての文字が正しく入力されたら新しい問題文をセットする関数
     if(typeInputTextWords.length <= 0){
         if(questions.length <= 0){
-          game.classList.add('hidden');
-          message.classList.remove('hidden');
+          game.classList.add('hidden'); //ゲーム画面を非表示
+          message.classList.remove('hidden'); //終了メッセージの表示
         }else{
-          setQuestion();
+          setQuestion();//新しい問題文をセット
         }
         // console.log('クリア');
         // setQuestion();
