@@ -154,3 +154,7 @@ document.addEventListener('type-Input',(e) => {
 
   }
 });
+
+replayBtn.addEventListener('click',() => {
+  window.location.reload();
+});
