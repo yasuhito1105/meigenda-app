@@ -89,7 +89,11 @@
 // ここからAPIを使わないコードを書く
 const question = [
   'JavaScript',
-  'document'
+  'document',
+  'const',
+  'let',
+  'console'
+
 ];
 
 const typeDisplay = document.getElementById('typeDisplay');
