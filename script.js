@@ -92,8 +92,11 @@ const question = [
   'document',
   'const',
   'let',
-  'console'
-
+  'console',
+  'addEventListener',
+  'getElementById',
+  'split',
+  'Math'
 ];
 
 const typeDisplay = document.getElementById('typeDisplay');
