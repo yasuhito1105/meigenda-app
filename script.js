@@ -96,7 +96,8 @@ const question = [
   'addEventListener',
   'getElementById',
   'split',
-  'Math'
+  'Math',
+  'click'
 ];
 
 const typeDisplay = document.getElementById('typeDisplay');
