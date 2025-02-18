@@ -123,7 +123,7 @@ const setQuestion = () =>{
 
   // 問題が重複しない処理
   questions.splice(currentKer,1);
-  console.log(questions);
+  // console.log(questions);
 
   typeDisplay.textContent = '';
   typeInput.textContent = currentText;
@@ -143,8 +143,8 @@ document.addEventListener('type-Input',(e) => {
     typeDisplayTextWord.push( typeInputTextWords[0] );
     typeInputTextWords.shift();
 
-    console.log('入力済み:' + typeDisplayTextWords);
-    console.log('未入力:' + typeInputTextWords)
+    // console.log('入力済み:' + typeDisplayTextWords);
+    // console.log('未入力:' + typeInputTextWords)
 
     typeDisplay.textContent = typeDisplayTextWords.join('');
     typeInput.textContent = typeInputTextWords.join('');
